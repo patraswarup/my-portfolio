@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Journey - Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: #1e293b;
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+      animation: fadeInDown 1.5s ease;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+    header p {
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1.5s ease forwards;
+    }
+    section:nth-of-type(2) {
+      animation-delay: 0.5s;
+    }
+    section:nth-of-type(3) {
+      animation-delay: 1s;
+    }
+    section:nth-of-type(4) {
+      animation-delay: 1.5s;
+    }
+    h2 {
+      color: #1e293b;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
+      font-size: 1.5rem;
+    }
+    .timeline {
+      border-left: 3px solid #1e293b;
+      padding-left: 1.5rem;
+      margin: 2rem 0;
+      position: relative;
+    }
+    .timeline div {
+      margin-bottom: 1.5rem;
+      position: relative;
+      opacity: 0;
+      transform: translateX(-30px);
+      animation: fadeInRight 1s ease forwards;
+    }
+    .timeline div:nth-child(1) { animation-delay: 0.3s; }
+    .timeline div:nth-child(2) { animation-delay: 0.6s; }
+    .timeline div:nth-child(3) { animation-delay: 0.9s; }
+    .timeline div:nth-child(4) { animation-delay: 1.2s; }
+    .timeline div:nth-child(5) { animation-delay: 1.5s; }
+    .timeline div:nth-child(6) { animation-delay: 1.8s; }
+    .timeline h3 {
+      margin: 0;
+      font-size: 1.1rem;
+      color: #0f172a;
+    }
+    .skills ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .skills ul li {
+      background: #e2e8f0;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      transition: transform 0.3s, background 0.3s;
+      cursor: default;
+    }
+    .skills ul li:hover {
+      transform: scale(1.1);
+      background: #cbd5e1;
+    }
+    footer {
+      text-align: center;
+      background: #1e293b;
+      color: #fff;
+      padding: 1rem;
+      margin-top: 2rem;
+      animation: fadeInUp 2s ease;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header h1 { font-size: 1.8rem; }
+      header p { font-size: 0.9rem; }
+      section { padding: 0.5rem; margin: 1.5rem auto; }
+      h2 { font-size: 1.3rem; }
+      .skills ul { flex-direction: column; }
+      .skills ul li { width: fit-content; }
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInRight {
+      from { opacity: 0; transform: translateX(-50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Personal Journey</h1>
+    <p>A boy from Medinipur, Odisha → Software Engineer → Data Engineering Professional</p>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>I grew up in a remote village named <strong>Medinipur</strong> in the district of <strong>Kalahandi</strong>, Odisha. At the age of 16, I moved to Bhubaneswar for my studies, completed my bachelors, and started my career in technology. Since then, I have built a strong professional journey across India and abroad, specializing in <strong>data engineering</strong>, <strong>banking domain</strong>, and <strong>stakeholder management</strong>.</p>
+  </section>
+
+  <section>
+    <h2>My Journey</h2>
+    <div class="timeline">
+      <div>
+        <h3>Childhood</h3>
+        <p>Born and raised in Medinipur, Kalahandi, Odisha.</p>
+      </div>
+      <div>
+        <h3>Age 16 – Bhubaneswar</h3>
+        <p>Moved to Bhubaneswar for higher studies and completed my bachelors.</p>
+      </div>
+      <div>
+        <h3>1st Job – Chennai</h3>
+        <p>Started career at <strong>Hexaware Technologies</strong> as a Software Engineer.</p>
+      </div>
+      <div>
+        <h3>TCS – Pune</h3>
+        <p>Moved to TCS Pune after 3 years in Chennai.</p>
+      </div>
+      <div>
+        <h3>Bengaluru</h3>
+        <p>Chose love over career by moving to Bengaluru to live with my girlfriend, sacrificing my first onsite opportunity to Budapest. Worked at <strong>Morgan Stanley</strong> for 4 years.</p>
+      </div>
+      <div>
+        <h3>Glasgow</h3>
+        <p>Moved to <strong>Morgan Stanley Glasgow</strong>, later joined <strong>JP Morgan Glasgow</strong> in December 2022. Living and working here for the past 4 years.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills">
+    <h2>Skills & Expertise</h2>
+    <ul>
+      <li>Data Engineering</li>
+      <li>Banking Domain</li>
+      <li>Stakeholder Management</li>
+      <li>Communication & Soft Skills</li>
+      <li>Agile Methodology</li>
+      <li>Python</li>
+      <li>Databricks</li>
+      <li>AWS Public Cloud</li>
+      <li>And many more...</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2025 My Portfolio | Built with ❤️</p>
+  </footer>
+</body>
+</html>
